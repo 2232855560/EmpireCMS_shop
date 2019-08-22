@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>高级搜索 - Powered by EmpireCMS</title>
+<link href="/skin/default/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/default/js/tabs.js"></script>
+<script src="/e/data/images/setday.js"></script>
+</head>
+<body class="listpage">
+<!-- 页头 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="top">
+<tr>
+<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="63%">
+<!-- 登录 -->
+<script>
+document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+</script>
+</td>
+<td align="right">
+<a onclick="window.external.addFavorite(location.href,document.title)" href="#ecms">加入收藏</a> | <a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('/')" href="#ecms">设为首页</a> | <a href="/e/member/cp/">会员中心</a> | <a href="/e/DoInfo/">我要投稿</a> | <a href="/e/web/?type=rss2" target="_blank">RSS<img src="/skin/default/images/rss.gif" border="0" hspace="2" /></a>
+</td>
+</tr>
+</table></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="10">
+<tr valign="middle">
+<td width="240" align="center"><a href="/"><img src="/skin/default/images/logo.gif" width="200" height="65" border="0" /></a></td>
+<td align="center"><a href="http://www.phome.net/OpenSource/" target="_blank"><img src="/skin/default/images/opensource.gif" width="100%" height="70" border="0" /></a></td>
+</tr>
+</table>
+<!-- 导航tab选项卡 -->
+<table width="920" border="0" align="center" cellpadding="0" cellspacing="0" class="nav">
+  <tr> 
+    <td class="nav_global"><ul>
+        <li class="curr" id="tabnav_btn_0" onmouseover="tabit(this)"><a href="/">首页</a></li>
+        <li id="tabnav_btn_1" onmouseover="tabit(this)"><a href="/news/">新闻中心</a></li>
+        <li id="tabnav_btn_2" onmouseover="tabit(this)"><a href="/download/">下载中心</a></li>
+        <li id="tabnav_btn_3" onmouseover="tabit(this)"><a href="/movie/">影视频道</a></li>
+        <li id="tabnav_btn_4" onmouseover="tabit(this)"><a href="/shop/">网上商城</a></li>
+        <li id="tabnav_btn_5" onmouseover="tabit(this)"><a href="/flash/">FLASH频道</a></li>
+        <li id="tabnav_btn_6" onmouseover="tabit(this)"><a href="/photo/">图片频道</a></li>
+        <li id="tabnav_btn_7" onmouseover="tabit(this)"><a href="/article/">文章中心</a></li>
+        <li id="tabnav_btn_8" onmouseover="tabit(this)"><a href="/info/">分类信息</a></li>
+      </ul></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="10" cellpadding="0">
+	<tr valign="top">
+		<td class="list_content"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="position">
+				<tr>
+					<td>现在的位置：<a href='/'>首页</a>&nbsp;>&nbsp;<a href='../search/'>高级搜索</a>&nbsp;></td>
+				</tr>
+			</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="box">
+				<tr>
+					<td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><form action='/e/search/index.php' method="post" name="search_news" id="search_news">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td width="54%"><table width="100%" border="0" cellpadding="6" cellspacing="0">
+													<tr>
+														<td bgcolor="#F4F4F4"><strong>搜索范围</strong></td>
+													</tr>
+											</table></td>
+											<td width="46%"><table width="100%" border="0" cellpadding="6" cellspacing="0">
+													<tr>
+														<td bgcolor="#F4F4F4"><strong>搜索栏目</strong></td>
+													</tr>
+											</table></td>
+										</tr>
+										<tr>
+											<td valign="top"><table width="100%" border="0" cellpadding="6" cellspacing="0">
+													<tr>
+														<td><input type="radio" name="show" value="title" checked="checked" />
+															标题
+															<input type="radio" name="show" value="smalltext" />
+															简介
+															<input type="radio" name="show" value="newstext" />
+															内容
+															<input type="radio" name="show" value="writer" />
+															作者
+															<input name="show" type="radio" value="title,smalltext,newstext,writer" />
+															不限</td>
+													</tr>
+												</table>
+													<br />
+													<table width="100%" border="0" cellpadding="6" cellspacing="0">
+														<tr bgcolor="#F4F4F4">
+															<td><strong>时间限制</strong><font color="#666666">(0000-00-00为不限制)</font></td>
+														</tr>
+														<tr>
+															<td height="30" valign="top">从
+																<input name="starttime" type="text" value="0000-00-00" size="12" onclick="setday(this)" />
+																到
+																<input name="endtime" type="text" value="0000-00-00" size="12" onclick="setday(this)" />
+																之间的数据</td>
+														</tr>
+														<tr>
+															<td bgcolor="#F4F4F4"><strong>价格限制</strong><font color="#666666">(商城模型中有效,0为不限制)</font></td>
+														</tr>
+														<tr>
+															<td>从
+																<input name="startprice" type="text" id="startprice" value="0" size="6" />
+																到
+																<input name="endprice" type="text" id="endprice" value="0" size="6" />
+																元之间</td>
+														</tr>
+												</table></td>
+											<td valign="top"><table width="100%" border="0" cellspacing="6" cellpadding="0">
+													<tr>
+														<td><select name="classid" size="8" id="select2" style="width: 100%;height:112px">
+																<option value="0" selected="selected">所有栏目</option>
+															<option value='1'>|-产品中心</option><option value='2' style='background:#99C4E3'>&nbsp;&nbsp;|-家具-furniture</option><option value='3' style='background:#99C4E3'>&nbsp;&nbsp;|-计时器-Calculagraph</option><option value='4' style='background:#99C4E3'>&nbsp;&nbsp;|-旅游-tourism</option><option value='5' style='background:#99C4E3'>&nbsp;&nbsp;|-居家-Household</option>
+          
+														</select></td>
+													</tr>
+												</table>
+													<table width="100%" border="0" cellpadding="6" cellspacing="0">
+														<tr>
+															<td bgcolor="#F4F4F4"><strong>结果显示</strong></td>
+														</tr>
+														<tr>
+															<td height="30"><select name="orderby" id="select4">
+																	<option value="">按发布日期</option>
+																	<option value="id">信息ID</option>
+																	<option value="plnum">评论数</option>
+																	<option value="onclick">人气</option>
+																	<option value="totaldown">下载数</option>
+																</select>
+																	<select name="myorder" id="select5">
+																		<option value="0">倒序排列</option>
+																		<option value="1">顺序排列</option>
+																	</select>
+															</td>
+														</tr>
+												</table></td>
+										</tr>
+									</table>
+								<table width="100%" border="0" cellpadding="4" cellspacing="0">
+										<tr>
+											<td>关键字：
+												<input name="keyboard" type="text" id="keyboard2" size="60" />
+													<input type="submit" name="Submit22" value="搜索" />
+											</td>
+										</tr>
+									</table>
+							</form></td>
+						</tr>
+					</table></td>
+				</tr>
+			</table></td>
+	</tr>
+</table>
+<footer id="nm-footer" class="nm-footer">
+			<div class="nm-footer-bar">
+				<div class="nm-footer-bar-inner">
+					<div class="nm-row">
+						<div class="nm-footer-bar-left col-md-8 col-xs-12">
+							<ul id="nm-footer-bar-menu" class="menu">
+								<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="/abouts.html">关于我们</a></li>
+								<li id="menu-item-384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-384"><a href="/eq.html">帮助中心</a></li>
+								<li id="menu-item-385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-385"><a href="/contact.html">联系我们</a></li>
+								<li class="nm-footer-bar-text menu-item"><div>© By <a href="http://www.lehucloud.com">LehuCloud</a></div></li>
+							</ul>
+						</div>
+						<div class="nm-footer-bar-right col-md-4 col-xs-12">
+						<ul class="nm-footer-bar-social">
+							<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</footer>
+		<div id="nm-mobile-menu" class="nm-mobile-menu">
+                <div class="nm-mobile-menu-scroll">
+                    <div class="nm-mobile-menu-content">
+                        <div class="nm-row">
+                            <div class="nm-mobile-menu-top col-xs-12">
+                                <ul id="nm-mobile-menu-top-ul" class="menu">
+                                    <li class="nm-mobile-menu-item-cart menu-item">
+                                        <a href="/e/ShopSys/buycar/" id="nm-mobile-menu-cart-btn">
+                                            <span class="nm-menu-cart-title">
+                                               购物车
+                                            </span>
+
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="nm-mobile-menu-main col-xs-12">
+                                <ul id="nm-mobile-menu-main-ul" class="menu">
+                                    <li class="shop-link menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children current-menu-item current_page_item menu-item-20">
+                                        <a href="http://haohuo.029mh.com/">
+                                            首页
+                                        </a>
+                                        <span class="nm-menu-toggle">
+                                        </span>
+                                    </li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-391">
+                                        <a href="/product">
+                                            产品中心
+                                        </a>
+                                        <span class="nm-menu-toggle">
+                                        </span>
+                                        [showclasstemp]1,13,0,0[/showclasstemp]
+                                    </li>
+                                    <li class="megamenu col-3 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-271">
+                                        <a href="/abouts.html">
+                                            关于我们
+                                        </a>
+                                        <span class="nm-menu-toggle">
+                                        </span>
+                                    </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+							<div class="nm-mobile-menu-secondary col-xs-12">
+                                <ul id="nm-mobile-menu-secondary-ul" class="menu">
+                                    <script src="/e/member/login/loginjs_mb.php"></script>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		<div id="nm-widget-panel" class="nm-widget-panel">
+			<div class="nm-widget-panel-inner"><div class="nm-widget-panel-header">
+			<div class="nm-widget-panel-header-inner"> <a href="#" id="nm-widget-panel-close"> 
+				<span class="nm-cart-panel-title">Cart <span class="nm-menu-cart-count count">0</span></span> 
+				<span class="nm-widget-panel-close-title">Close</span> 
+				</a>
+				</div>
+				</div>
+				<div class="widget_shopping_cart_content">
+					<div id="nm-cart-panel" class="nm-cart-panel-empty">
+						<div id="nm-cart-panel-loader"><h5 class="nm-loader">Updating&hellip;</h5></div>
+						<div class="nm-cart-panel-list-wrap">
+							<ul class="cart_list product_list_widget "><li class="empty">No products in the cart.</li></ul>
+						</div>
+						<div class="nm-cart-panel-summary">
+							<div class="nm-cart-panel-summary-inner">
+								<p class="buttons nm-cart-empty-button">
+									<a href="http://savoy.nordicmade.com/" id="nm-cart-panel-continue" class="button border">Continue Shopping</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="nm-quickview" class="clearfix"></div>
+		<div id="nm-page-includes" class="quickview products banner-slider banner shop_categories shop_filters " style="display:none;">&nbsp;</div> 
+		<script type="text/template" id="tmpl-variation-template">
+		
+		<div class="woocommerce-variation-description">
+		{{{ data.variation.variation_description }}}
+			</div>
+
+    <div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
+
+    <div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
+		</script> 
+		<script type="text/template" id="tmpl-unavailable-variation-template"><p>Sorry, this product is unavailable. Please choose a different combination.</p></script> 
+		
+		<script type='text/javascript'>/*  */
+var nm_wp_vars = {"themeUri":"http:\/\/haohuo.029mh.com\","\/":"","searchUrl":"http:\/\/haohuo.029mh.com\/?s=","pageLoadTransition":"0","shopFiltersAjax":"1","shopAjaxUpdateTitle":"1","shopImageLazyLoad":"1","shopScrollOffset":"70","shopScrollOffsetTablet":"70","shopScrollOffsetMobile":"70","shopSearch":"shop","shopSearchMinChar":"2","shopSearchAutoClose":"1","shopAjaxAddToCart":"1","shopRedirectScroll":"1","shopCustomSelect":"1","wpGalleryPopup":"1"};
+/*  */</script> 
+		<!-- <script type='text/javascript'>/*  */
+var _wpUtilSettings = {"ajax":{"url":"\/[!--class.id--]"}};
+/*  */</script>  -->
+		<script type='text/javascript'>/*  */
+var wc_add_to_cart_variation_params = {"i18n_no_matching_variations_text":"Sorry, no products matched your selection. Please choose a different combination.","i18n_make_a_selection_text":"Please select some product options before adding this product to your cart.","i18n_unavailable_text":"Sorry, this product is unavailable. Please choose a different combination."};
+/*  */</script> 
+		<script type='text/javascript'>/*  */
+var nm_wishlist_vars = {"wlButtonTitleAdd":"Add to Wishlist","wlButtonTitleRemove":"Remove from Wishlist"};
+/*  */</script> 
+		<script src="scripts/1179d34135e6a7dae4d28531d9c681e3.js" data-minify="1"></script>
+		<script src="scripts/b9e3d9a907aea99495296c26edb361a8.js" data-minify="1"></script>
+		<script src="scripts/8f5532cf724f8e8bbffcefe0909b4601.js" data-minify="1"></script> 
+		</div>
+	</body>
+</html>
+</body>
+</html>

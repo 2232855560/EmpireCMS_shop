@@ -1,0 +1,1 @@
+document.write("<li><a href=\"/product/32.shtml\" title=\"Smart router\">Smart router</a></li><li><a href=\"/product/31.shtml\" title=\"MI laptop\">MI laptop</a></li><li><a href=\"/product/34.shtml\" title=\"Smart Bracelet\">Smart Bracelet</a></li><li><a href=\"/product/33.shtml\" title=\"Smart rearview mirror\">Smart rearview mirror</a></li>");

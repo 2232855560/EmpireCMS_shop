@@ -1,0 +1,4 @@
+安装说明:第一种直接安装  你的域名/e/install  安装完毕后 系统设置-恢复与备份数据-恢复数据  恢复完毕后，后台的用户名: 52pojie  密码：www.52pojie.cn  第二种:导入数据库52pojie.sql（压缩包里有），然后修改e目录下的config/config.php 里边的   $ecms_config['db']['dbusername']=' ';    //数据库用户名    $ecms_config['db']['dbpassword']='  ';    //数据库密码   $ecms_config['db']['dbname']=' ';    //数据库名  即可，然后就按照帝国的后台操作步骤进行数据更新！
+
+链接：https://pan.baidu.com/s/1d-McwAAos3joqVlbOI36yw 
+提取码：jdnn 

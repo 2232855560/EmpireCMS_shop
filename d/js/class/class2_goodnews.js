@@ -1,0 +1,1 @@
+document.write("<li><a href=\"/product/22.shtml\" title=\"Classic Chair\">Classic Chair</a></li><li><a href=\"/product/21.shtml\" title=\"Striped Canvas Sofa\">Striped Canvas Sofa</a></li><li><a href=\"/product/24.shtml\" title=\"Henrysofa\">Henrysofa</a></li><li><a href=\"/product/29.shtml\" title=\"Specs Chair\">Specs Chair</a></li>");
